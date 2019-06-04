@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import java.security.PrivateKey;
 
+import com.qb.hardlibrary.*;
+
 /**
  * (1)ALL ON ==> ALL OFF【勾选4个LED】
  * (2)ALL OFF ==> ALL ON【取消勾选】
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Perform action on click
+                HardControl hardControl = new HardControl();
+
                 ledon = !ledon;
                 if (ledon) {
                     Log.d(TAG, "ALL ON");
